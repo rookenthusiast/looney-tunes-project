@@ -8,7 +8,8 @@ Owner.delete_all
 looney_tune1 = Looney.new({
   'name' => 'Tweety_pie',
   'breed' => 'canary',
-  'days_in' => 8
+  'days_in' => 8,
+  'owners_id' => owner1.id
   })
 
 looney_tune1.save
@@ -16,7 +17,8 @@ looney_tune1.save
 looney_tune2 = Looney.new({
   'name' => 'Bugs Bunny',
   'breed' => 'Rabbit',
-  'days_in' => 8
+  'days_in' => 8,
+  'owners_id' => owner2.id
   })
 
 looney_tune2.save
@@ -24,7 +26,8 @@ looney_tune2.save
 looney_tune3 = Looney.new({
   'name' => 'Gossamer',
   'breed' => 'hair',
-  'days_in' => 15
+  'days_in' => 15,
+  'owners_id' => owner3.id
   })
 
 looney_tune3.save
@@ -32,7 +35,8 @@ looney_tune3.save
 looney_tune4 = Looney.new({
   'name' => 'Porky Pig',
   'breed' => 'Pig',
-  'days_in' => 10
+  'days_in' => 10,
+  'owners_id' => nil
   })
 
 looney_tune4.save
@@ -40,7 +44,8 @@ looney_tune4.save
 looney_tune5 = Looney.new({
   'name' => 'Tazmanian Devil',
   'breed' => 'devil',
-  'days_in' => 20
+  'days_in' => 20,
+  'owners_id' => nil 
   })
 
 looney_tune5.save
