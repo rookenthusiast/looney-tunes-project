@@ -13,7 +13,8 @@ class Looney
   def save
     sql = "INSERT INTO looneys (name, breed, days_in) 
     VALUES ('#{name}', '#{breed}', #{days_in}) RETURNING *"
-    result = SqlRunner.run(sql)
+    results = SqlRunner.run(sql)
+    @id = results.first()['id'].to_i
   end
 
   def Self.all
