@@ -5,6 +5,24 @@ require('pry-byebug')
 Looney.delete_all
 Owner.delete_all
 
+owner1 = Owner.new({
+  'name' => 'Granny'
+  })
+
+owner1.save
+
+owner2 = Owner.new({
+  'name' => 'Elmer Fudd'
+  })
+
+owner2.save
+
+owner3 = Owner.new({
+  'name' => 'Marvin the Martian'
+  })
+
+owner3.save
+
 looney_tune1 = Looney.new({
   'name' => 'Tweety_pie',
   'breed' => 'canary',
@@ -50,23 +68,6 @@ looney_tune5 = Looney.new({
 
 looney_tune5.save
 
-owner1 = Owner.new({
-  'name' => 'Granny'
-  })
-
-owner1.save
-
-owner2 = Owner.new({
-  'name' => 'Elmer Fudd'
-  })
-
-owner2.save
-
-owner3 = Owner.new({
-  'name' => 'Marvin the Martian'
-  })
-
-owner3.save
 
 binding.pry
 

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('owner.rb')
 
 class Looney
 
@@ -9,6 +10,7 @@ class Looney
     @name = options['name']
     @breed = options['breed']
     @days_in = options['days_in'].to_i
+    @owners_id = options['owner.id'].to_i
     @id = options['id'].to_i 
   end
 
@@ -35,6 +37,15 @@ class Looney
   def self.delete_all
     sql ="DELETE FROM looneys"
     result = SqlRunner.run(sql)
+  end
+
+  def owner
+    sql = "SELECT o.* FROM owners o
+    INNER JOIN looneys l
+    ON o.id = l.owners_id
+    WHERE l.owners_id = #{@id};"
+    result = SqlRunner.run(sql)
+    return Owner.new(result.first)
   end
 
 
