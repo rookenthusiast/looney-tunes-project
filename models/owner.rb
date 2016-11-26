@@ -3,8 +3,8 @@ require_relative('looney')
 
 class Owner
   
-  attr_accessor :name 
-  attr_reader :id
+  attr_accessor :name, :id
+  
 
   def initialize(options)
     @name = options['name']
@@ -13,7 +13,7 @@ class Owner
 
   def save()
     sql = "INSERT INTO owners (name) 
-    VALUES ('#{name}') RETURNING *"
+    VALUES ('#{@name}') RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end

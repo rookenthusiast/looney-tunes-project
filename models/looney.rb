@@ -1,9 +1,9 @@
 require_relative('../db/sql_runner')
-require_relative('owner.rb')
+require_relative('owner')
 
 class Looney
 
-  attr_accessor :name, :breed, :days_in 
+  attr_accessor :name, :breed, :days_in, :owners_id 
   attr_reader :id
 
   def initialize(options)
@@ -15,8 +15,8 @@ class Looney
   end
 
   def save
-    sql = "INSERT INTO looneys (name, breed, days_in) 
-    VALUES ('#{name}', '#{breed}', #{days_in}) RETURNING *"
+    sql = "INSERT INTO looneys (name, breed, days_in, owners_id) 
+    VALUES ('#{@name}', '#{@breed}', #{@days_in}, #{@owners_id}) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end
@@ -39,14 +39,13 @@ class Looney
     result = SqlRunner.run(sql)
   end
 
-  def owner
-    sql = "SELECT o.* FROM owners o
-    INNER JOIN looneys l
-    ON o.id = l.owners_id
-    WHERE l.owners_id = #{@id};"
-    result = SqlRunner.run(sql)
-    return Owner.new(result.first)
-  end
+  def owner()
+   sql = "SELECT * FROM looneys WHERE id = #{@id}"
+   result = SqlRunner.run( sql )
+   owner = Owner.new( result[0] )
+   return owner
+ end
+ 
 
 
 
