@@ -20,7 +20,7 @@ owner3 = Owner.new({
 owner3.save
 binding.pry
 looney_tune1 = Looney.new({
-  'owners_id' => owner1.id,
+  # 'owners_id' => owner1.id,
   'name' => 'Tweety_pie',
   'breed' => 'canary',
   'days_in' => 8
