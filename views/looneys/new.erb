@@ -8,19 +8,8 @@
 
   <label>
     Breed:
-    <input type="text" name="name" />
+    <input type="text" name="breed" />
   </label>
-
-    <p>
-     <label>
-       Owner ID:
-      <select name="owner id">
-<% for owner in @owners %>
-      <option value= <%=owner.id %>><%= owner.name %></option> 
-           <% end %>
-      </select>
-    </label>
  
-
   <input type="submit" value="Add Looney " />
   </form>

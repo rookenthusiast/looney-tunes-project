@@ -10,7 +10,11 @@ class Looney
     @name = options['name']
     @breed = options['breed']
     @days_in = options['days_in'].to_i
-    @owners_id = options['owners_id'].to_i
+    owner_id = options['owners_id']
+
+    owner_id = nil if owner_id == ""
+    @owners_id = owner_id ?  owner_id.to_i : 'null'
+    
     @id = options['id'].to_i 
   end
 

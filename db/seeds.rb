@@ -2,13 +2,9 @@ require_relative('../models/looney')
 require_relative('../models/owner')
 require('pry-byebug')
 
+
 Looney.delete_all
 Owner.delete_all
-
-owner1 = Owner.new({
-  'name' => 'Looney Tunes Shelter'
-  })
-owner1.save
 
 owner2 = Owner.new({
   'name' => 'Granny'
@@ -23,7 +19,8 @@ owner4 = Owner.new({
   'name' => 'Marvin the Martian'
   })
 owner4.save
-# binding.pry
+# # binding.pry
+
 looney_tune1 = Looney.new({
   'owners_id' => owner2.id,
   'name' => 'Tweety_pie',
@@ -31,6 +28,7 @@ looney_tune1 = Looney.new({
   'days_in' => 8
   })
 looney_tune1.save
+
 looney_tune2 = Looney.new({
   'name' => 'Bugs Bunny',
   'breed' => 'Rabbit',
@@ -49,14 +47,14 @@ looney_tune4 = Looney.new({
   'name' => 'Porky Pig',
   'breed' => 'Pig',
   'days_in' => 10,
-  'owners_id' => owner1.id
+  'owners_id' => nil
   })
 looney_tune4.save
 looney_tune5 = Looney.new({
   'name' => 'Tazmanian Devil',
   'breed' => 'devil',
   'days_in' => 20,
-  'owners_id' => owner1.id
+  'owners_id' => nil
   })
 looney_tune5.save
 
