@@ -10,7 +10,7 @@ class Looney
     @name = options['name']
     @breed = options['breed']
     @days_in = options['days_in'].to_i
-    @owners_id = options['owner.id'].to_i
+    @owners_id = options['owners_id'].to_i
     @id = options['id'].to_i 
   end
 
@@ -40,7 +40,7 @@ class Looney
   end
 
   def owner()
-   sql = "SELECT * FROM looneys WHERE id = #{@id}"
+   sql = "SELECT * FROM owners WHERE id = #{@owners_id}"
    result = SqlRunner.run( sql )
    owner = Owner.new( result[0] )
    return owner

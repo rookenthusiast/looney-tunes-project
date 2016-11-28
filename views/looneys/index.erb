@@ -1,0 +1,8 @@
+<p><a href="/looneys/new">New Looney</a></p>
+
+<% for looney in @looneys %>
+  <p>Name:  <%= looney.name %></p>
+  <p>Breed: <%= looney.breed %></p>
+  <p>Owner: <%= looney.owner.name %></p>
+  <hr/>
+<%end%>

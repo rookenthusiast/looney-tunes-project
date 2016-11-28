@@ -1,0 +1,7 @@
+<p><a href="/owners/new">New Adopter</a></p>
+
+<% for owner in @owners %>
+  <p>Name:  <%= owner.name %></p>
+  <p>ID:  <%= owner.id %></p>
+  <hr/>
+<%end%>
