@@ -6,5 +6,6 @@
   <p>Owner:  <%= looney.owners_id != 'null' ? looney.owner.name : "Up for Adoption"%>
 </p>
   <p>Days In: <%= looney.days_in %></p>
+  <a href="/looneys/<%= looney.id %>">Show looneys details</a>
   <hr/>
 <%end%>

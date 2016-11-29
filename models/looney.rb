@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 require_relative('owner')
+require('pry-byebug')
 
 class Looney
 
@@ -49,8 +50,20 @@ class Looney
    owner = Owner.new( result[0] )
    return owner
  end
+
+ def self.rub_out(id)
+  sql = "DELETE FROM looneys WHERE id = #{id}"
+  result = SqlRunner.run(sql)
+end
  
+ def self.update( options )
+   sql = "UPDATE looneys SET owners_id = #{options['owners_id']} WHERE id = '#{options['id']}'"
+   SqlRunner.run( sql )
+ end
 
 
 
 end
+
+
+

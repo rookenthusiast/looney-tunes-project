@@ -1,0 +1,12 @@
+<h>Looney tune</h>
+<p>Name: <%= @looney.name %></p>
+<p>Breed: <%= @looney.breed %></p>
+<p>Days in: <%= @looney.days_in %></p>
+<p>Owner: <%= @looney.owners_id != 'null' ? @looney.owner.name : "Up for Adoption"%></p>
+<form action="/looneys/<%= @looney.id %>/delete" method="post">
+  <input type="submit" value="Erase" /> 
+</form>
+<form action="/looneys/<%= @looney.id %>/edit" method="get">
+  <input type="submit" value="Update details" /> 
+  </form>
+

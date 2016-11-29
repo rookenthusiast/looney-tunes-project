@@ -25,6 +25,27 @@ end
 
 #remove looney from database
 post '/looneys/:id/delete' do
-Looney.remove(params[:id])
+Looney.rub_out(params[:id])
 redirect to('/looneys')
 end
+
+#show looney by its id
+get '/looneys/:id' do
+  @looney = Looney.find( params[:id])
+  @owners = Owner.all
+  erb(:'looneys/show')
+end
+
+#show edit looney details form
+get '/looneys/:id/edit' do
+  @looney = Looney.find(params[:id])
+  @owners = Owner.all
+  erb(:'looneys/edit')
+end
+
+#edited looney
+post '/looneys/:id' do
+Looney.update( params )
+  redirect to("/looneys/#{(params[:id])}")
+end
+

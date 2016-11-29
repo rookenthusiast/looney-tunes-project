@@ -1,0 +1,17 @@
+<h1>Select New Owner</h1>
+<form action="/looneys/<%= @looney.id %>" method="post">
+  <p>
+    <label>
+      Choose from the following:
+      <select name="owners_id">
+        <% for owner in @owners%>
+        <option value= "<%=owner.id %>"><%= owner.name %></option>
+        <% end %>
+      </select>
+    </label> 
+  </p>
+
+
+
+  <input type="submit" value="adopt" />
+</form>
