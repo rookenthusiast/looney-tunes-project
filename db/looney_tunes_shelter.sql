@@ -12,6 +12,7 @@ CREATE TABLE looneys(
   name Varchar(255) not null,
   breed Varchar(255) not null,
   days_in INT8,
+  URl text,
   owners_id INT8 references owners(id)
   );
 

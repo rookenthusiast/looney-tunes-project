@@ -3,6 +3,7 @@
 <p>Breed: <%= @looney.breed %></p>
 <p>Days in: <%= @looney.days_in %></p>
 <p>Owner: <%= @looney.owners_id != 'null' ? @looney.owner.name : "Up for Adoption"%></p>
+<p><img src="<%=@looney.url" alt="looney image" /> 
 <form action="/looneys/<%= @looney.id %>/delete" method="post">
   <input type="submit" value="Erase" /> 
 </form>

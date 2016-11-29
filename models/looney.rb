@@ -4,7 +4,7 @@ require('pry-byebug')
 
 class Looney
 
-  attr_accessor :name, :breed, :days_in, :owners_id 
+  attr_accessor :name, :breed, :days_in, :owners_id , :url
   attr_reader :id
 
   def initialize(options)
@@ -15,13 +15,15 @@ class Looney
 
     owner_id = nil if owner_id == ""
     @owners_id = owner_id ?  owner_id.to_i : 'null'
+
+    @url = options['url'] || 'null'
     
     @id = options['id'].to_i 
   end
 
   def save
-    sql = "INSERT INTO looneys (name, breed, days_in, owners_id) 
-    VALUES ('#{@name}', '#{@breed}', #{@days_in}, #{@owners_id}) RETURNING *"
+    sql = "INSERT INTO looneys (name, breed, days_in, owners_id, url) 
+    VALUES ('#{@name}', '#{@breed}', #{@days_in}, #{@owners_id}, '#{@url}') RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end
