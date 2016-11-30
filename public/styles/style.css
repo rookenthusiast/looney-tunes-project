@@ -16,6 +16,7 @@
 .nav ul{
   display: flex;
   justify-content: space-between; 
+  list-style-type: none; 
   font-family: cartoon;
   font-size: 150%;
   color: white;
@@ -23,17 +24,15 @@
      background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
      background: linear-gradient(bottom,  #800000 , #f06d06 255px);
     margin-top: 0;
-    text-decoration: none;
-    
-}
-
-.nav ul li {
-    display: inline-block;
-}
+    padding: 0;
+    padding-right: 10px;
+    border: 1px solid #555;
+  }
   
 .nav audio {
   width: 69px;
 }
+
 .nav a:visited {
       color: orange;
   }
@@ -61,7 +60,13 @@ p {
 
 .image-container {
   display: flex;
-  /*flex-direction: row;*/
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.show-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

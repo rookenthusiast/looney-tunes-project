@@ -4,13 +4,13 @@
 <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
 
 <h1>Looney tune</h1>
-<div class = image-container>
-<img src="<%= @looney.url %>"/>
-</div>
-<p>Name: <%= @looney.name %></p>
-<p>Breed: <%= @looney.breed %></p>
-<p>Days in: <%= @looney.days_in %></p>
-<p>Owner: <%= @looney.owners_id != 'null' ? @looney.owner.name : "Up for Adoption"%></p>
+<div class="show-image">
+  <img src="<%= @looney.url %>"/>
+  </div>
+  <p>Name: <%= @looney.name %></p>
+  <p>Breed: <%= @looney.breed %></p>
+  <p>Days in: <%= @looney.days_in %></p>
+  <p>Owner: <%= @looney.owners_id != 'null' ? @looney.owner.name : "Up for Adoption"%></p>
 </div>
 
 
