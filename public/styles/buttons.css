@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "cartoon";
+  src: url("../fonts/looneyFont.ttf");
+}
+
 .button--erase {
- text-align: center;
+ text-align: left;
+ position: absolute;
+ left: 50px;
+ top: 50%;
+}
+
+input[type=submit]{
+  width: 20em;  height: 4em;
 }
 
 .button--update {
-  text-align: center;
+  text-align: right;
+  position: absolute;
+  right: 50px;
+  top: 50%;
 }
+

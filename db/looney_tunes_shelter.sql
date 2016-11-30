@@ -6,6 +6,7 @@ CREATE TABLE owners(
   id SERIAL8 primary key,
   name Varchar(255) not null
   -- contact_number Varchar(255) not null
+  -- email Varchar(255) 
   
   );
 

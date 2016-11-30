@@ -20,21 +20,21 @@ body {
   font-family: cartoon;
   font-size: 150%;
   color: white;
-  background: -webkit-linear-gradient(bottom,#800000 , #f06d06  255px);
-  background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
-  background: linear-gradient(bottom,  #800000 , #f06d06 255px);
+  background: -webkit-linear-gradient(left,#800000 , #f06d06  70%);
+  background: -moz-linear-gradient(left, #800000, #f06d06  70%);
+  background: linear-gradient(left,  #800000 , #f06d06 70%);
   margin-top: 0;
-  padding: 0;
-  padding-right: 70px;
+  margin-bottom: 100px;
+  padding-right: 50px;
   border: 1px solid #555;
 }
 
 .nav audio {
-  width: 69px;
+ padding: 1%;
 }
 
 .nav a:visited {
-  color: orange;
+  color: white;
 }
 
 .nav a:link{
@@ -66,6 +66,10 @@ p {
   text-align: center;
 }
 
+a {
+  color: white;
+}
+
 .button {
   float: center;
   overflow: hidden;
@@ -79,6 +83,8 @@ p {
   align-items: center;
   flex-wrap: wrap;
 }
+
+
 
 .show-image {
   display: flex;
