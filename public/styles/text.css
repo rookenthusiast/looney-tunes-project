@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "cartoon";
+  src: url("../fonts/looneyFont.ttf");
+}
+
+h1 {
+  color: white;
+  font-family: cartoon;
+  font-size: 250%;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: cartoon;
+  font-size: 250%;
+  text-align: justify;
+}
+
+.button a:visited {
+  color: orange;
+}
+

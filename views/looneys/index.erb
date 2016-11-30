@@ -1,13 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/styles/background.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
 <p><a href="/looneys/new">New Looney</a></p>
-
+<h1>Meet The Looneys</h1>
 <% for looney in @looneys %>
   <p>Name:  <%= looney.name %></p>
   <p>Breed: <%= looney.breed %></p>
   <p>Owner:  <%= looney.owners_id != 'null' ? looney.owner.name : "Up for Adoption"%>
 </p>
   <p>Days In: <%= looney.days_in %></p>
-  <img src = "<%= looney.url %>">
-  
-  <p><a href="/looneys/<%= looney.id %>">Show looneys details</a></p>
+
+<div class= button >
+  <a href="/looneys/<%= looney.id %>"><img src="<%= looney.url %>" style= "width:150px;height150px;"></a>
+  </div>
   <hr/>
 <%end%>

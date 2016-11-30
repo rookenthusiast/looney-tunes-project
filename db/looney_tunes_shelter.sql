@@ -5,6 +5,8 @@ DROP TABLE IF EXISTS owners;
 CREATE TABLE owners(
   id SERIAL8 primary key,
   name Varchar(255) not null
+  -- contact_number Varchar(255) not null
+  
   );
 
 CREATE TABLE looneys(

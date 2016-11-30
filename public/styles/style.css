@@ -2,30 +2,31 @@
   font-family: "cartoon";
   src: url("../fonts/looneyFont.ttf");
 }
+
+
  body {
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
 }
 .nav ul{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-
+  justify-content: space-between; 
   font-family: cartoon;
   font-size: 150%;
   color: white;
-  background-image: linear-gradient(
-      to right, 
-      #800000, #f06d06
-    );;
+  background: -webkit-linear-gradient(bottom,#800000 , #f06d06  255px);
+     background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
+     background: linear-gradient(bottom,  #800000 , #f06d06 255px);
+     padding: 20px 0 20px 0;
 }
 
 .nav ul li {
-     display: table-cell;
-     width: auto;
+    display: inline-block;
+    padding: 20px 0 20px 0;
      text-align: center;
    }
   
