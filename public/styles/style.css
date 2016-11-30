@@ -13,7 +13,9 @@
   margin: 0px;
   text-decoration: none;
 }
+
 .nav ul{
+  display: flex;
   justify-content: space-between; 
   font-family: cartoon;
   font-size: 150%;
