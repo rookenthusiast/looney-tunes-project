@@ -4,7 +4,7 @@
 }
 
 
- body {
+body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -21,21 +21,36 @@
   font-size: 150%;
   color: white;
   background: -webkit-linear-gradient(bottom,#800000 , #f06d06  255px);
-     background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
-     background: linear-gradient(bottom,  #800000 , #f06d06 255px);
-    margin-top: 0;
-    padding: 0;
-    padding-right: 10px;
-    border: 1px solid #555;
-  }
-  
+  background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
+  background: linear-gradient(bottom,  #800000 , #f06d06 255px);
+  margin-top: 0;
+  padding: 0;
+  padding-right: 70px;
+  border: 1px solid #555;
+}
+
 .nav audio {
   width: 69px;
 }
 
 .nav a:visited {
-      color: orange;
-  }
+  color: orange;
+}
+
+.nav a:link{
+  color: white;
+}
+
+.nav a:hover{
+  color: red;
+}
+
+form {
+  font-family: cartoon;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
 
 h1 {
   color: white;
