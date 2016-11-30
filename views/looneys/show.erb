@@ -1,9 +1,10 @@
 <link rel="stylesheet" type="text/css" href="/styles/background.css">
 <link rel="stylesheet" type="text/css" href="/styles/text.css">
 <link rel="stylesheet" type="text/css" href="/styles/images.css">
+<link rel="stylesheet" type="text/css" href="/styles/buttons.css">
 
 <h1>Looney tune</h1>
-<div class = container>
+<div class = image-container>
 <img src="<%= @looney.url %>"/>
 </div>
 <p>Name: <%= @looney.name %></p>
@@ -13,10 +14,10 @@
 </div>
 
 
-<form action="/looneys/<%= @looney.id %>/delete" method="post">
+<form class = "button--erase" action="/looneys/<%= @looney.id %>/delete" method="post">
   <input type="submit" value="Erase" /> 
 </form>
-<form action="/looneys/<%= @looney.id %>/edit" method="get">
+<form class = "button--update" action="/looneys/<%= @looney.id %>/edit" method="get">
   <input type="submit" value="Update details" /> 
   </form>
 

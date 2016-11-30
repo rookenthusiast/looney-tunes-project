@@ -23,6 +23,7 @@
      background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
      background: linear-gradient(bottom,  #800000 , #f06d06 255px);
     margin-top: 0;
+    text-decoration: none;
     
 }
 
@@ -30,7 +31,9 @@
     display: inline-block;
 }
   
-
+.nav audio {
+  width: 69px;
+}
 .nav a:visited {
       color: orange;
   }
@@ -58,6 +61,7 @@ p {
 
 .image-container {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: row;*/
   align-items: center;
+  flex-wrap: wrap;
 }
