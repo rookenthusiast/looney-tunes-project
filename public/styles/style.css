@@ -6,12 +6,11 @@
 
  body {
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0px;
   margin: 0px;
-  text-decoration: none;
 }
 
 .nav ul{
@@ -23,14 +22,13 @@
   background: -webkit-linear-gradient(bottom,#800000 , #f06d06  255px);
      background: -moz-linear-gradient(bottom, #800000, #f06d06  255px);
      background: linear-gradient(bottom,  #800000 , #f06d06 255px);
-     padding: 20px 0 20px 0;
+    margin-top: 0;
+    
 }
 
 .nav ul li {
     display: inline-block;
-    padding: 20px 0 20px 0;
-     text-align: center;
-   }
+}
   
 
 .nav a:visited {
@@ -49,4 +47,17 @@ p {
   font-family: cartoon;
   font-size: 250%;
   text-align: center;
+}
+
+.button {
+  float: center;
+  overflow: hidden;
+  height: 250px;
+  width: 250px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
